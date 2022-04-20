@@ -1,0 +1,48 @@
+diff '--exclude=.git' -urN a/meson.build b/meson.build
+--- a/meson.build	2021-12-06 23:34:00.000000000 -0600
++++ b/meson.build	2022-04-09 11:54:48.193134863 -0500
+@@ -284,7 +284,7 @@
+ libm_dep = cc.find_library('m', required: false)
+ libpangoft2_dep = dependency('pangoft2', version: '>= 1.38.0')
+ libpeas_dep = dependency('libpeas-1.0', version: '>= 1.22.0')
+-libportal_dep = dependency('libportal', version: '>= 0.3', required: false)
++libportal_dep = dependency('libportal-gtk3', version: '>= 0.3', required: false)
+ libtemplate_glib_dep = dependency('template-glib-1.0', version: '>= 3.28.0')
+ libvte_dep = dependency('vte-2.91', version: '>= 0.40.2')
+ libwebkit_dep = dependency('webkit2gtk-4.0', version: '>= 2.26', required: false)
+diff '--exclude=.git' -urN a/src/gstyle/gstyle-color-panel.c b/src/gstyle/gstyle-color-panel.c
+--- a/src/gstyle/gstyle-color-panel.c	2021-12-06 23:34:00.000000000 -0600
++++ b/src/gstyle/gstyle-color-panel.c	2022-04-09 11:54:36.370179519 -0500
+@@ -30,7 +30,7 @@
+ #include "gstyle-color.h"
+ 
+ #include <libportal/portal.h>
+-#include <libportal/portal-gtk3.h>
++#include <libportal-gtk3/portal-gtk3.h>
+ 
+ #define HSV_TO_SCALE_FACTOR (1.0 / 256.0)
+ #define CIELAB_L_TO_SCALE_FACTOR (100.0 / 256.0)
+diff '--exclude=.git' -urN a/src/plugins/devhelp/gbp-devhelp-page.c b/src/plugins/devhelp/gbp-devhelp-page.c
+--- a/src/plugins/devhelp/gbp-devhelp-page.c	2021-12-06 23:34:00.000000000 -0600
++++ b/src/plugins/devhelp/gbp-devhelp-page.c	2022-04-09 11:54:36.371179515 -0500
+@@ -25,7 +25,7 @@
+ #include <webkit2/webkit2.h>
+ 
+ #include <libportal/portal.h>
+-#include <libportal/portal-gtk3.h>
++#include <libportal-gtk3/portal-gtk3.h>
+ 
+ #include "gbp-devhelp-page.h"
+ #include "gbp-devhelp-search.h"
+diff '--exclude=.git' -urN a/src/plugins/open-with-external/gbp-owe-workbench-addin.c b/src/plugins/open-with-external/gbp-owe-workbench-addin.c
+--- a/src/plugins/open-with-external/gbp-owe-workbench-addin.c	2021-12-06 23:34:00.000000000 -0600
++++ b/src/plugins/open-with-external/gbp-owe-workbench-addin.c	2022-04-09 11:54:36.371179515 -0500
+@@ -23,7 +23,7 @@
+ #include "gbp-owe-workbench-addin.h"
+ 
+ #include <libportal/portal.h>
+-#include <libportal/portal-gtk3.h>
++#include <libportal-gtk3/portal-gtk3.h>
+ 
+ struct _GbpOweWorkbenchAddin
+ {
