@@ -55,12 +55,6 @@ BDEPEND="
 	virtual/pkgconfig
 "
 
-PATCHES=(
-	# From Gentoo:
-	# 	https://bugs.gentoo.org/831936
-	"${FILESDIR}"/${PN}-40.1.1-fix-build-with-meson-0.61.1.patch
-)
-
 pkg_setup() {
 	python_setup
 }
