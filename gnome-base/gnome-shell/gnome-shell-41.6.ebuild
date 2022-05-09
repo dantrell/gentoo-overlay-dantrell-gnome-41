@@ -143,11 +143,6 @@ PATCHES=(
 	# From Gentoo:
 	# 	https://bugs.gentoo.org/831921
 	"${FILESDIR}"/${PN}-41.3-fix-build-with-meson-0.61.1.patch
-
-	# From upstream
-	"${FILESDIR}"/${PN}-41.5-environment-Require-GnomeBluetooth-1.0.patch
-	"${FILESDIR}"/${PN}-41.5-environment-Require-gnome-desktop-3.0.patch
-	"${FILESDIR}"/${PN}-41.5-environment-Require-libgweather-3.0.patch
 )
 
 src_prepare() {
