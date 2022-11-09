@@ -118,17 +118,9 @@ BDEPEND="
 	') )
 "
 
-PATCHES=(
-	# Patches from gnome-40 branch on top of 40.0
-	# Makes some panels and dependencies optional
-	# https://bugzilla.gnome.org/686840, 697478, 700145
-	# Fix some absolute paths to be appropriate for Gentoo
-	"${WORKDIR}"/patches/
-)
-
 python_check_deps() {
 	use test || return 0
-	has_version "dev-python/python-dbusmock[${PYTHON_USEDEP}]"
+	python_has_version "dev-python/python-dbusmock[${PYTHON_USEDEP}]"
 }
 
 pkg_setup() {
@@ -136,6 +128,16 @@ pkg_setup() {
 }
 
 src_prepare() {
+	if [[ -d "${WORKDIR}/patches" ]] ; then
+		rm "${WORKDIR}"/patches/0006*.patch || die
+
+		# Patches from gnome-40 branch on top of 40.0
+		# Makes some panels and dependencies optional
+		# https://bugzilla.gnome.org/686840, 697478, 700145
+		# Fix some absolute paths to be appropriate for Gentoo
+		eapply "${WORKDIR}"/patches
+	fi
+
 	default
 	xdg_environment_reset
 	# Mark python tests with shebang executable, so that meson will launch them directly, instead
