@@ -1,8 +1,10 @@
 app-accessibility/at-spi2-core::gentoo
 app-accessibility/orca::gentoo
+app-crypt/seahorse::gentoo
 app-editors/gedit-plugins::gentoo
 app-editors/gedit::gentoo
 app-editors/ghex::gentoo
+app-editors/gnome-latex::gentoo
 app-misc/gnote::gentoo
 app-misc/tracker-miners::gentoo
 app-misc/tracker::gentoo
