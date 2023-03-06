@@ -5,6 +5,7 @@ app-editors/gedit-plugins::gentoo
 app-editors/gedit::gentoo
 app-editors/ghex::gentoo
 app-editors/gnome-latex::gentoo
+app-editors/gnome-text-editor::gentoo
 app-misc/gnote::gentoo
 app-misc/tracker-miners::gentoo
 app-misc/tracker::gentoo
