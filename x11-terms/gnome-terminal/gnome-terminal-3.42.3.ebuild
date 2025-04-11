@@ -6,13 +6,13 @@ inherit gnome.org gnome2-utils meson readme.gentoo-r1 xdg
 
 DESCRIPTION="A terminal emulator for GNOME"
 HOMEPAGE="https://wiki.gnome.org/Apps/Terminal/ https://gitlab.gnome.org/GNOME/gnome-terminal"
+SRC_URI+=" !vanilla? ( https://dev.gentoo.org/~mattst88/distfiles/${PN}-3.42.2-cntr-ntfy-autottl-ts.patch.xz )"
 
 LICENSE="GPL-3+"
 SLOT="0"
 KEYWORDS="*"
 
 IUSE="debug +gnome-shell +nautilus vanilla"
-SRC_URI+=" !vanilla? ( https://dev.gentoo.org/~mattst88/distfiles/${PN}-3.42.2-cntr-ntfy-autottl-ts.patch.xz )"
 
 # FIXME: automagic dependency on gtk+[X], just transitive but needs proper control, bug 624960
 RDEPEND="
